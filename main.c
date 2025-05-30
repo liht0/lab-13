@@ -3,7 +3,6 @@
 #include <signal.h>
 #include <setjmp.h>
 #include <string.h>
-
 sigjmp_buf jmpbuf;
 
 void signal_handler(int sig) {
@@ -58,38 +57,38 @@ int main() {
                     exit(0);
                 
                 case 1:
-                    printf("Генерация SIGABRT\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGABRT\n");
                     abort();
                     break;
                 
                 case 2:
-                    printf("Генерация SIGFPE\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGFPE\n");
                     int a = 10, b = 0;
-                    int c = a / b; // Деление на ноль
+                    int c = a / b; // Г„ГҐГ«ГҐГ­ГЁГҐ Г­Г  Г­Г®Г«Гј
                     break;
                 
                 case 3:
-                    printf("Генерация SIGILL\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGILL\n");
                     raise(SIGILL);
                     break;
                 
                 case 4:
-                    printf("Генерация SIGINT\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGINT\n");
                     raise(SIGINT);
                     break;
                 
                 case 5:
-                    printf("Генерация SIGSEGV\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGSEGV\n");
                     generate_segfault();
                     break;
                 
                 case 6:
-                    printf("Генерация SIGTERM\n");
+                    printf("ГѓГҐГ­ГҐГ°Г Г¶ГЁГї SIGTERM\n");
                     raise(SIGTERM);
                     break;
                 
                 default:
-                    printf("Неверный выбор!\n");
+                    printf("ГЌГҐГўГҐГ°Г­Г»Г© ГўГ»ГЎГ®Г°!\n");
             }
         }
     }
