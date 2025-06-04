@@ -25,7 +25,6 @@ void signal_handler(int sig) {
     }
 }
 
-
 void generate_segfault() {
     int *ptr = NULL;
     *ptr = 42; 
