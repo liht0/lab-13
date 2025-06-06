@@ -29,7 +29,6 @@ void generate_segfault() {
     int *ptr = NULL;
     *ptr = 42; 
 }
-
 int main() {
     signal(SIGABRT, signal_handler);
     signal(SIGFPE,  signal_handler);
